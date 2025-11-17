@@ -35,23 +35,23 @@ const items = [
 
 export default function Features() {
   return (
-    <section id="features" className="relative py-20 bg-white">
-      <div className="absolute inset-x-0 -top-24 -z-0 blur-3xl opacity-30 pointer-events-none" aria-hidden>
-        <div className="mx-auto h-48 w-3/4 rounded-full bg-gradient-to-r from-purple-300 via-fuchsia-300 to-orange-300" />
+    <section id="features" className="relative py-24">
+      <div className="absolute inset-x-0 -top-24 -z-10 blur-3xl opacity-30 pointer-events-none" aria-hidden>
+        <div className="mx-auto h-48 w-3/4 rounded-full bg-gradient-to-r from-purple-700/40 via-fuchsia-600/40 to-orange-500/40" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Alles, was du für die MPU brauchst</h2>
-          <p className="mt-3 text-gray-600">Strukturiert, persönlich, verständlich – geführt von KI.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold">Alles, was du für die MPU brauchst</h2>
+          <p className="mt-3 text-white/70">Strukturiert, persönlich, verständlich – geführt von KI.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="group rounded-2xl border border-gray-200 p-6 bg-white hover:shadow-xl transition-shadow">
-              <div className="h-12 w-12 rounded-xl bg-gradient-to-tr from-purple-600 via-fuchsia-500 to-orange-400 text-white flex items-center justify-center shadow-lg">
+            <div key={title} className="group rounded-2xl glass p-6 hover:shadow-2xl transition-transform hover:-translate-y-1">
+              <div className="h-12 w-12 rounded-xl bg-gradient-to-tr from-purple-600 via-fuchsia-500 to-orange-400 text-white flex items-center justify-center shadow-lg glow">
                 <Icon size={22} />
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">{title}</h3>
-              <p className="mt-2 text-gray-600">{desc}</p>
+              <h3 className="mt-4 text-lg font-semibold">{title}</h3>
+              <p className="mt-2 text-white/70">{desc}</p>
             </div>
           ))}
         </div>
